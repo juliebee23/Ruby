@@ -15,7 +15,7 @@
 # 10.times do
 #   puts count**2
 #   # count = count + 1
-#   count += 1
+#   count +=1
 # end
 
 # num = 1###################################### if loop is broken and goes crazy, hit CTRL C
@@ -122,9 +122,9 @@
 #   fifth_num = gets.chomp
 
 # numbers = {"first_num", "sec_num", "third_num", "fouth_num", "fifth_num"}
-#   puts "numbers.sum
+#   puts "numbers.sum"
 
-# name = "Julie"######################################################################## Homework pt 1
+# name = "Julie"############################################################################################## Homework pt 1
 
 # str = name
 #   puts str
@@ -137,33 +137,120 @@
 #   # end
 # end
 
-# puts "Pick a name or word to see it translated to Pig Latin."######################### Homework pt 2
+# puts "Pick a name or word to see it translated to Pig Latin."################################################## Homework pt 2
 # name_word = gets.chomp.downcase
-# my_array = name_word.split #ex. ["j", "u", "l", "i", "e"]
-# vowels = ["a", "e", "i", "o", "u"]
 
-# # puts "#{name_word.split}"
-
-# if my_array.first === "a"#|| my_array.first.include? "e" || my_array.first.include? "i" || my_array.first.include? "o" || my_array.first.include? "u"
+# if name_word.start_with?("a","e","i","o","u")
 #   puts "#{name_word}way"
 # else
-#   puts "M."
+#   first_letter = name_word[0]
+#   puts name_word[1..-1] + first_letter + "ay"
 # end
 
-puts "Pick a name or word to see it translated to Pig Latin."
-name_word = gets.chomp.downcase
-my_array = name_word.chars
-vowels = ["a", "e", "i", "o", "u"]
+################################################################################################################ Homework pt 3
+=begin
+..............................................................................................................................
+Remember that you have to import, or require, certain ruby libraries (ex.prime)
+..............................................................................................................................
+=end
 
-if my_array.first = "a", "e", "i", "o", "u"
-  puts "#{name_word}way"
-else
-  puts "M."
-end
+# require "prime"
+# puts "Enter a number to list all the prime numbers between 1 and that number."
+# num = gets.chomp.to_i
+
+# Prime.each(num) do |prime|
+#   puts prime
+# end
+
+################################################################################################################ Homework pt 4
+=begin
+..............................................................................................................................
+**  .sample is used with strings and will return a random value in an array
+First names response.sample as comp_response after initial 'puts' but learned that you have to name the variable in the loop 
+   so that its different for every loop. 
+Had to put this before puts comp_response and not after
+..............................................................................................................................
+=end
+
+# puts "Lets play Rock, Paper, Scissors! First one to 5 wins!"
+# response = ["Rock","Paper","Scissors"]
+# # comp_response = response.sample
+# player_score = 0
+# comp_score = 0
+
+# until player_score == 5 || comp_score == 5
+#   puts "Rock, paper, scissors, SHOOT!"
+#   shoot = gets.chomp.capitalize
+#     if response.include? shoot
+#       comp_response = response.sample
+#       puts comp_response
+#       if comp_response == shoot
+#         puts "Tied!"
+#       elsif comp_response == "Rock" && shoot == "Paper"
+#         player_score += 1
+#         puts "You win!"
+#       elsif comp_response == "Paper" && shoot == "Scissors"
+#         player_score += 1
+#         puts "You win!"
+#       elsif comp_response == "Scissors" && shoot == "Rock"
+#         player_score += 1
+#         puts "You win!"
+#       else
+#         comp_score += 1
+#         puts "You lose!"
+#       end 
+#     else
+#       puts "DISQUALIFIED"
+#     end
+# end
+
+# if player_score == 5
+#   puts "Congratulations! You won! The score was #{player_score} to #{comp_score}!"
+# else 
+#   puts "You lost! The score was #{player_score} to #{comp_score}. Maybe next time!"
+# end
+
+###############################################################################################################Homework pt 5
+# array = Array(1..100)
+
+# array.length.times do |x|
+#   if (x+1)%3 == 0 && (x+1)%5 == 0
+#     puts "FizzBuzz"
+#   elsif (x+1)%3 == 0
+#     puts "Fizz"
+#   elsif (x+1)%5 == 0
+#     puts "Buzz"
+#   else 
+#     puts "#{array[x]}"
+#   end
+# end
+
+###############################################################################################################Homework pt 6
+# Still Not sure what :+ means or reduce. 
+# test_scores = [68, 43, 37, 83, 75, 52, 96, 56]
+
+# puts "The test scores in ascending order are as follows:"
+# puts test_scores.sort
+
+# puts "And the average of the test scores is #{test_scores.reduce(:+) / test_scores.size}"
+
+################################################################################################################Homework pt 7
+
+# cntry_n_caps = {"USA"=>"Washington, DC", "Canada"=>"Ottawa", "United Kingdom"=>"London", "France"=>"Paris", "Germany"=>"Berlin", "Egypt"=>"Cairo", "Ghana"=>"Accra", "Kenya"=>"Nairobi", "Somalia"=>"Mogadishu", "Sudan"=>"Khartoum", "Tunisia"=>"Tunis", "Japan"=>"Tokyo", "China"=>"Beijing", "Thailand"=>"Bangkok", "India"=>"New Delhi", "Philippines"=>"Manila", "Australia"=>"Canberra", "Kyrgyzstan"=>"Bishkek"}
+# score = 0
 
 
-
-
+# cntry_n_caps.each do |key, value|
+#   puts "What is the capital of #{key}?"
+#   response = gets.chomp.capitalize
+#     if response == value
+#       puts "Correct! 1 point awarded"
+#       score += 1
+#     else 
+#       puts "Incorrect. What is wrong with you?"
+#     end
+# end
+# puts "You scored #{score} out of 18!"
 
 
 
